@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    /* background-image: url(https://www.hb.se/globalassets/global/akademi-3/bildpuffar/adobestock_177369238.jpg?format=webp&width=800&rmode=min);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: rgb(23,13,30);
+    background: linear-gradient(90deg, rgba(23,13,30,1) 12%, rgba(74,18,14,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(48, 48, 48, 0.402);
+    
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 1rem;
+    
+}
+
+
+.home{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0;
+}
+
+.f1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Borrow{
+    /* opacity: 0; */
+    
+}
+
+.Return{
+    opacity: 0;
+}
+
+button{
+    border: none;
+    background-color: rgba(48, 48, 48, 0);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 450;
+}
+
+.main a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+    background-color: rgba(48, 48, 48, 0.479);
+    padding: 8px 18px; 
+    border-radius: 12px;
+}
+
+ul a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.main{
+    margin-top: 50px;
+    margin-left: 580px;
+}
+
+.c1 img{
+    height: 350px;
+    width: 250px;
+    box-shadow: 0 4px 20px rgba(97 71 94 / 70%); 
+    border-radius: 8px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+
+
+
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-brand img {
+    width: 20px; /* Adjust the size as needed */
+    margin-right: 10px;
+}
