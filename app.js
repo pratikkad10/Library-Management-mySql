@@ -29,9 +29,9 @@ connection.connect((err) => {
     console.log('Connected to MySQL!');
 });
 
+
+//Default route....
 app.get('/', (req, res)=>{
-    // const username = req.session.user ? req.session.user.username : 'Guest';
-    // res.render('home.ejs', {username});
     res.render('home.ejs');
 });
 
