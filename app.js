@@ -1,5 +1,6 @@
 const express=require('express'); 
 const app=express();
+const expressLayouts=require('express-ejs-layouts');
 
 const path=require('path'); 
 
@@ -11,6 +12,20 @@ app.use(methodOverride('_method'));
 const port=5000;
 app.use(express.urlencoded({ extended: true }));
 
+
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+app.use(express.static(path.join(__dirname, "public")));
+
+
+
+//mongoose connection
+const dbConnect=require('./config/mongo.config');
+// dbConnect();
+
+
+
 //books routes
 const bookRoutes=require('./routes/book.route');
 app.use('/', bookRoutes);
@@ -19,14 +34,6 @@ app.use('/', bookRoutes);
 const userRoutes=require('./routes/user.route');
 app.use('/', userRoutes);
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/views"));
-app.use(express.static(path.join(__dirname, "public")));
-
-
-//mongoose connection
-const dbConnect=require('./config/mongo.config');
-// dbConnect();               
 
 //Default route....
 app.get('/', (req, res)=>{
