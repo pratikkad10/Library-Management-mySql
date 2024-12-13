@@ -22,7 +22,7 @@ module.exports.bookId= (req,res)=>{
     connection.query(q4, (err, result)=>{
         try {
             if(err) throw err;
-            console.log(result[0]);   
+            // console.log(result[0]);   
             let bookDetails=result[0];
             res.render('user.ejs', {bookDetails});
             
