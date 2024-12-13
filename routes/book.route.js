@@ -7,6 +7,10 @@ const { returned, returnedBook } = require('../controllers/returned');
 const { Delete } = require('../controllers/delete');
 
 //Routes
+router.get('/', (req, res)=>{
+    res.render('home.ejs');
+});
+
 router.get('/books', books);
 router.get('/books/issued', issued);
 router.get('/books/returned', returned);
