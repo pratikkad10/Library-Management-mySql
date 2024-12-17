@@ -16,18 +16,18 @@ module.exports.books= (req,res)=>{
     })
 }
 
-module.exports.bookId= (req,res)=>{
-    let {id}=req.params;
-    let q4=`SELECT * FROM books WHERE book_id=${id}`;
-    connection.query(q4, (err, result)=>{
-        try {
-            if(err) throw err;
-            // console.log(result[0]);   
-            let bookDetails=result[0];
-            res.render('user.ejs', {bookDetails});
+// module.exports.bookId= (req,res)=>{  //no need
+//     let {id}=req.params;
+//     let q4=`SELECT * FROM books WHERE book_id=${id}`;
+//     connection.query(q4, (err, result)=>{
+//         try {
+//             if(err) throw err;
+//             // console.log(result[0]);   
+//             let bookDetails=result[0];
+//             res.render('user.ejs', {bookDetails});
             
-        } catch (error) {
-            res.send("Error has been occured!");
-        }
-    })
-}
+//         } catch (error) {
+//             res.send("Error has been occured!");
+//         }
+//     })
+// }

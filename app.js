@@ -72,6 +72,6 @@ const userRoutes=require('./routes/user.route');
 app.use('/user', userRoutes);
 
 app.listen(PORT, (req, res)=>{
-    console.log(`App listening on port: ${PORT}`);
+    console.log(`App is listening on :- http://localhost:${PORT}`);
 });
 

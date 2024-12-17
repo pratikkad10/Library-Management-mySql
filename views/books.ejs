@@ -28,7 +28,7 @@
                     <td><%= book.title %></td>
                     <td><%= book.author %></td>
                     <td>
-                        <form method="get" action="/books/<%= book.book_id %>">
+                        <form method="post" action="/books/<%= book.book_id %>/username">   
                             <button>Issue book</button>
                         </form>
                     </td>

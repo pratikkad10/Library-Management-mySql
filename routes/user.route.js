@@ -17,4 +17,14 @@ router.post('/login',  passport.authenticate('local',
 
 router.post('/register', signup);
 
+router.get('/logout', (req,res,next)=>{
+    req.logout((err)=>{
+        return next(err);
+    })
+
+    console.log("user logged out!");
+    res.redirect('/');
+    
+})
+
 module.exports=router;

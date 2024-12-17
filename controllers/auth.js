@@ -5,8 +5,6 @@ exports.signup=async (req,res)=>{
         
         let {username, Email, password}=req.body;
         // console.log(req.body);
-        
-
         const existingUser=await User.findOne({username});
 
         if(existingUser){
@@ -18,8 +16,6 @@ exports.signup=async (req,res)=>{
         const registeredUser=await User.register(newUser, password);
         
         // console.log(registeredUser);
-        
-        
         req.login(registeredUser, (error)=>{
             if(error){
                 console.log(error);
@@ -27,11 +23,8 @@ exports.signup=async (req,res)=>{
             }
             res.redirect('/')
         })
-
     } catch (error) {
-            console.log("Kya hua bhai yaha kyu aaye ho!");
             console.log(error);
-            
             res.redirect('/user/register');
     }
 }
